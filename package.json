@@ -1,0 +1,26 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "Web scraping toolkit for Node.js with CLI and library interfaces",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "web-scraper": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["scraper", "web-scraping", "crawler", "html-parser", "cli"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^8.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "@types/node": "^16.11.12"
+  }
+}
