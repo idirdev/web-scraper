@@ -76,6 +76,7 @@ program
   });
 
 // Only run CLI if executed directly
-if (require.main === module) {
+const isDirectRun = process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
+if (isDirectRun) {
   program.parse();
 }
