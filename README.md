@@ -177,3 +177,37 @@ console.log(Output.toMarkdownTable(data));
 ## License
 
 MIT
+
+---
+
+## 🇫🇷 Documentation en français
+
+### Description
+`web-scraper` est une boîte à outils de scraping web pour Node.js offrant une interface CLI et une API de bibliothèque. Il permet de récupérer des pages, d'extraire du contenu via des sélecteurs CSS, de crawler des sites entiers avec limitation du débit, et d'exporter les résultats en JSON, CSV ou Markdown, sans dépendances lourdes.
+
+### Installation
+```bash
+npm install web-scraper
+```
+
+### Utilisation
+```bash
+# Extraire tous les liens d'une page
+web-scraper scrape https://example.com --links
+
+# Crawler un site avec limite de profondeur
+web-scraper crawl https://example.com -d 3 -m 100
+
+# Sauvegarder les résultats
+web-scraper scrape https://example.com --links -o resultats.json
+```
+
+```typescript
+import { Scraper } from 'web-scraper';
+
+const scraper = new Scraper({ timeout: 10000 });
+const result = await scraper.fetch('https://example.com');
+console.log(result.title, result.links);
+```
+
+Consultez la documentation anglaise ci-dessus pour la référence complète (Scraper, Parser, Crawler) et les bonnes pratiques éthiques.
